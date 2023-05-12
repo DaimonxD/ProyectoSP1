@@ -19,9 +19,7 @@ namespace ProyectoSP1
 
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
-            frmLogin Login = new frmLogin();
-            Login.Show();
-            this.Hide();
+
         }
 
         private void frmBienvenida_Load(object sender, EventArgs e)

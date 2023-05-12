@@ -17,16 +17,6 @@ namespace ProyectoSP1
     {
         BD bd = new BD();
 
-        private  bool Mensaje = false;
-
-        private void UnMensaje()
-        {
-            if (!Mensaje)
-            {
-                Mensaje = true;
-            }
-        }
-
 
         public frmLogin()
         {
@@ -55,68 +45,100 @@ namespace ProyectoSP1
 
         private void CmdAceptar2_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == bd.Usuario[0, 0] && txtContraseña.Text == bd.Contraseña[0, 0])
+            if (txtUsuario.Text == bd.Usuario[0, 0])
             {
-                if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
+                if (txtContraseña.Text == bd.Contraseña[0, 0])
                 {
-                    MessageBox.Show("Se inició sesión con el módulo Administración");
-                }
-                else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 2])
-                {
-                    MessageBox.Show("Se inició sesión con el módulo Compras");
-                }
-                else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
-                {
-                    MessageBox.Show("Se inició sesión con el módulo Ventas");
+                    if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Administración");
+                    }
+                    else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 2])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Compra");
+                    }
+                    else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Venta");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Módulo seleccionado incorrecto");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Módulo seleccionado incorrecto");
+                    MessageBox.Show("Contraseña incorrecta");
                 }
             }
-            if (txtUsuario.Text == bd.Usuario[0, 1] && txtContraseña.Text == bd.Contraseña[0, 1] )
+            if (txtUsuario.Text == bd.Usuario[0, 1])
             {
-                if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 1])
+                if (txtContraseña.Text == bd.Contraseña[0, 1])
                 {
-                    MessageBox.Show("Se inició sesión con el módulo Sistema");
+                    if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 1])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Sistema");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Módulo seleccionado incorrecto");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Módulo seleccionado incorrecto");
+                    MessageBox.Show("Contraseña incorrecta");
                 }
             }
-            if (txtUsuario.Text == bd.Usuario[0, 2] && txtContraseña.Text == bd.Contraseña[0, 2])
+            if (txtUsuario.Text == bd.Usuario[0, 2])
             {
-                if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
+                if (txtContraseña.Text == bd.Contraseña[0, 2])
                 {
-                    MessageBox.Show("Se inició sesión con el módulo Administración");
-                }
-                else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
-                {
-                    MessageBox.Show("Se inició sesión con el módulo Ventas");
+                    if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Administración");
+                    }
+                    else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Venta");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Módulo seleccionado incorrecto");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Módulo seleccionado incorrecto");
+                    MessageBox.Show("Contraseña incorrecta");
                 }
             }
-            if (txtUsuario.Text == bd.Usuario[0, 3] && txtContraseña.Text == bd.Contraseña[0, 3])
+            if (txtUsuario.Text == bd.Usuario[0, 3])
             {
-                if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
+                if (txtContraseña.Text == bd.Contraseña[0, 3])
                 {
-                    MessageBox.Show("Se inició sesión con el módulo Administración");
+                    if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Administración");
+                    }
+                    else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 1])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Sistema");
+                    }
+                    else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 2])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Compra");
+                    }
+                    else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
+                    {
+                        MessageBox.Show("Se inició sesión correctamente con módulo de Venta");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Módulo seleccionado incorrecto");
+                    }
                 }
-                else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 1])
+                else
                 {
-                    MessageBox.Show("Se inició sesión con el módulo Sistema");
-                }
-                else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 2])
-                {
-                    MessageBox.Show("Se inició sesión con el módulo Compras");
-                }
-                else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
-                {
-                    MessageBox.Show("Se inició sesión con el módulo Ventas");
+                    MessageBox.Show("Contraseña incorrecta");
                 }
             }
         }

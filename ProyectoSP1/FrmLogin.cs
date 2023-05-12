@@ -16,6 +16,8 @@ namespace ProyectoSP1
     public partial class frmLogin : Form
     {
         BD bd = new BD();
+        frmBienvenida bv = new frmBienvenida();
+        frmLogin lg = new frmLogin();
 
 
         public frmLogin()
@@ -52,14 +54,20 @@ namespace ProyectoSP1
                     if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Administración");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 2])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Compra");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Venta");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else
                     {
@@ -78,6 +86,8 @@ namespace ProyectoSP1
                     if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 1])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Sistema");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else
                     {
@@ -96,10 +106,14 @@ namespace ProyectoSP1
                     if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Administración");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Venta");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else
                     {
@@ -118,18 +132,26 @@ namespace ProyectoSP1
                     if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 0])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Administración");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 1])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Sistema");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 2])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Compra");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else if (cboxMódulo.SelectedItem.ToString() == bd.Modulo[0, 3])
                     {
                         MessageBox.Show("Se inició sesión correctamente con módulo de Venta");
+                        lg.Hide();
+                        bv.Show();
                     }
                     else
                     {
@@ -150,6 +172,7 @@ namespace ProyectoSP1
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
             txtContraseña.MaxLength = 10;
+            txtContraseña.PasswordChar = '#';
         }
     }
 }

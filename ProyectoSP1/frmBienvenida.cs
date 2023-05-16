@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace ProyectoSP1
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

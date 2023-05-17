@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,23 @@ using System.Windows.Forms;
 
 namespace ProyectoSP1
 {
-    public partial class frmBienvenida : Form
+    public partial class frmLoad : Form
     {
-        public frmBienvenida()
+        frmLogin lg = new frmLogin();
+        public frmLoad()
         {
             InitializeComponent();
         }
 
-        private void cmdCerrar_Click(object sender, EventArgs e)
+        private void timerLoad_Tick(object sender, EventArgs e)
         {
-            Process.GetCurrentProcess().Kill();
+            pv.Width += 3;
+            if (pv.Width > 599)
+            {
+                timerLoad.Stop();
+                lg.Show();
+                
+            }
         }
     }
 }

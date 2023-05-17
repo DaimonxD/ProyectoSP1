@@ -48,7 +48,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(54, 16);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblContraseña
             // 
@@ -64,6 +63,7 @@
             // 
             this.lblMódulo.AutoSize = true;
             this.lblMódulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMódulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblMódulo.Location = new System.Drawing.Point(12, 160);
             this.lblMódulo.Name = "lblMódulo";
             this.lblMódulo.Size = new System.Drawing.Size(52, 16);
@@ -102,10 +102,10 @@
             this.cboxMódulo.Size = new System.Drawing.Size(141, 21);
             this.cboxMódulo.TabIndex = 5;
             this.cboxMódulo.Text = "Seleccionar";
-            this.cboxMódulo.SelectedIndexChanged += new System.EventHandler(this.cboxMódulo_SelectedIndexChanged);
             // 
             // CmdAceptar2
             // 
+            this.CmdAceptar2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CmdAceptar2.Location = new System.Drawing.Point(148, 218);
             this.CmdAceptar2.Name = "CmdAceptar2";
             this.CmdAceptar2.Size = new System.Drawing.Size(107, 35);
@@ -116,6 +116,8 @@
             // 
             // cmdCancelar2
             // 
+            this.cmdCancelar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmdCancelar2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmdCancelar2.Location = new System.Drawing.Point(15, 218);
             this.cmdCancelar2.Name = "cmdCancelar2";
             this.cmdCancelar2.Size = new System.Drawing.Size(107, 37);
@@ -138,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(266, 276);
             this.ControlBox = false;
             this.Controls.Add(this.lblNoSe);
@@ -149,6 +152,8 @@
             this.Controls.Add(this.lblMódulo);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);

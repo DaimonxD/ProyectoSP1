@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,24 +27,9 @@ namespace ProyectoSP1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboxMódulo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmdCancelar2_Click(object sender, EventArgs e)
         {
             Process.GetCurrentProcess().Kill();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void CmdAceptar2_Click(object sender, EventArgs e)
@@ -51,6 +37,8 @@ namespace ProyectoSP1
             string Usuario = txtUsuario.Text;
             string Contraseña = txtContraseña.Text;
             string Modulo = cboxMódulo.SelectedItem.ToString();
+            int Intentos = 0;
+            
 
             switch(true)
             {
@@ -88,7 +76,16 @@ namespace ProyectoSP1
 
                 default:
 
-                    MessageBox.Show("Usuario y/o Contraseña incorrecto(s) para el Módulo seleccionado");
+                    if (Intentos > 3)
+                    {
+                        Process.GetCurrentProcess().Kill();
+                    }
+                    else
+                    {
+                        Intentos++;
+                        MessageBox.Show("Los datos ingresados son incorrectos. Por favor, intenta nuevamente.");
+                    }
+
 
                     break;
 
@@ -103,6 +100,11 @@ namespace ProyectoSP1
         {
             txtContraseña.MaxLength = 10;
             txtContraseña.PasswordChar = '#';
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,8 +25,22 @@ namespace ProyectoSP1
             {
                 timerLoad.Stop();
                 lg.Show();
-                
+                this.Hide();
             }
+        }
+
+        private void frmLoad_Load(object sender, EventArgs e)
+        {
+            int LoadGordo = this.Width;
+            int LoadAlto = this.Height;
+
+            int lblGordo = lblCargando.Width;
+            int lblAlto = lblCargando.Height;
+
+            int lblX = (LoadGordo - lblGordo) / 2;
+            int lblY  = (LoadAlto - lblAlto) / 2;
+
+            lblCargando.Location = new Point(lblX, lblY);
         }
     }
 }

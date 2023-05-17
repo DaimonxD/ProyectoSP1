@@ -32,6 +32,9 @@
             this.pg = new System.Windows.Forms.Panel();
             this.pv = new System.Windows.Forms.Panel();
             this.timerLoad = new System.Windows.Forms.Timer(this.components);
+            this.lblCargando = new System.Windows.Forms.Label();
+            this.lblAB = new System.Windows.Forms.Label();
+            this.lblAA = new System.Windows.Forms.Label();
             this.pg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,24 +56,63 @@
             // 
             // timerLoad
             // 
+            this.timerLoad.Enabled = true;
             this.timerLoad.Interval = 15;
             this.timerLoad.Tick += new System.EventHandler(this.timerLoad_Tick);
+            // 
+            // lblCargando
+            // 
+            this.lblCargando.AutoSize = true;
+            this.lblCargando.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargando.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCargando.Location = new System.Drawing.Point(178, 209);
+            this.lblCargando.Name = "lblCargando";
+            this.lblCargando.Size = new System.Drawing.Size(213, 42);
+            this.lblCargando.TabIndex = 1;
+            this.lblCargando.Text = "Cargando...";
+            this.lblCargando.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAB
+            // 
+            this.lblAB.AutoSize = true;
+            this.lblAB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAB.Location = new System.Drawing.Point(270, 40);
+            this.lblAB.Name = "lblAB";
+            this.lblAB.Size = new System.Drawing.Size(33, 16);
+            this.lblAB.TabIndex = 4;
+            this.lblAB.Text = "SRL";
+            // 
+            // lblAA
+            // 
+            this.lblAA.AutoSize = true;
+            this.lblAA.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAA.Location = new System.Drawing.Point(220, 10);
+            this.lblAA.Name = "lblAA";
+            this.lblAA.Size = new System.Drawing.Size(131, 33);
+            this.lblAA.TabIndex = 3;
+            this.lblAA.Text = "Sintepart";
             // 
             // frmLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(578, 282);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAB);
+            this.Controls.Add(this.lblAA);
+            this.Controls.Add(this.lblCargando);
             this.Controls.Add(this.pg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoad";
-            this.Opacity = 0.5D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Load";
+            this.Load += new System.EventHandler(this.frmLoad_Load);
             this.pg.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,5 +121,8 @@
         private System.Windows.Forms.Panel pg;
         private System.Windows.Forms.Panel pv;
         private System.Windows.Forms.Timer timerLoad;
+        private System.Windows.Forms.Label lblCargando;
+        private System.Windows.Forms.Label lblAB;
+        private System.Windows.Forms.Label lblAA;
     }
 }

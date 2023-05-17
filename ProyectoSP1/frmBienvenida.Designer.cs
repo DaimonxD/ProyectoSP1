@@ -39,7 +39,7 @@
             this.lblBienvenido1.AutoSize = true;
             this.lblBienvenido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblBienvenido1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBienvenido1.Location = new System.Drawing.Point(34, 201);
+            this.lblBienvenido1.Location = new System.Drawing.Point(26, 37);
             this.lblBienvenido1.Name = "lblBienvenido1";
             this.lblBienvenido1.Size = new System.Drawing.Size(448, 26);
             this.lblBienvenido1.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.lblBienvenido2.AutoSize = true;
             this.lblBienvenido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblBienvenido2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBienvenido2.Location = new System.Drawing.Point(104, 227);
+            this.lblBienvenido2.Location = new System.Drawing.Point(96, 63);
             this.lblBienvenido2.Name = "lblBienvenido2";
             this.lblBienvenido2.Size = new System.Drawing.Size(310, 17);
             this.lblBienvenido2.TabIndex = 1;
@@ -59,21 +59,26 @@
             // 
             // cmdCerrar
             // 
+            this.cmdCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.cmdCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCerrar.ForeColor = System.Drawing.Color.White;
-            this.cmdCerrar.Location = new System.Drawing.Point(489, 0);
+            this.cmdCerrar.ForeColor = System.Drawing.Color.Red;
+            this.cmdCerrar.Location = new System.Drawing.Point(160, 450);
             this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(24, 25);
+            this.cmdCerrar.Size = new System.Drawing.Size(208, 40);
             this.cmdCerrar.TabIndex = 3;
-            this.cmdCerrar.Text = "X";
+            this.cmdCerrar.Text = "Cerrar";
             this.cmdCerrar.UseVisualStyleBackColor = false;
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
+            this.cmdCerrar.MouseEnter += new System.EventHandler(this.cmdCerrar_MouseEnter);
+            this.cmdCerrar.MouseLeave += new System.EventHandler(this.cmdCerrar_MouseLeave);
             // 
             // frmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(514, 526);
             this.ControlBox = false;
             this.Controls.Add(this.cmdCerrar);

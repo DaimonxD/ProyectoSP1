@@ -19,6 +19,7 @@ namespace ProyectoSP1
     {
         BD bd = new BD();
         frmBienvenida bv = new frmBienvenida();
+        int Intentos = 0;
     
 
 
@@ -36,59 +37,67 @@ namespace ProyectoSP1
         {
             string Usuario = txtUsuario.Text;
             string Contraseña = txtContraseña.Text;
-            string Modulo = cboxMódulo.SelectedItem.ToString();
-            int Intentos = 0;
+            string Modulo = cboxMódulo.SelectedItem?.ToString();
+
+
             
-
-            switch(true)
+            if(!string.IsNullOrEmpty(Modulo))
             {
-                case var _ when Usuario == bd.Usuario[0, 3] && Contraseña == bd.Contraseña[0, 3] && (Modulo == bd.Modulo[0, 0] || Modulo == bd.Modulo[0, 1] || Modulo == bd.Modulo[0, 2] || Modulo == bd.Modulo[0, 3]):
+                switch (true)
+                {
+                    case var _ when Usuario == bd.Usuario[0, 3] && Contraseña == bd.Contraseña[0, 3] && (Modulo == bd.Modulo[0, 0] || Modulo == bd.Modulo[0, 1] || Modulo == bd.Modulo[0, 2] || Modulo == bd.Modulo[0, 3]):
 
-                    MessageBox.Show("Bienvenido GOD");
-                    bv.Show();
-                    this.Hide();
+                        MessageBox.Show("Bienvenido GOD.");
+                        bv.Show();
+                        this.Hide();
 
-                    break;
+                        break;
 
-                case var _ when Usuario == bd.Usuario[0, 0] &&  Contraseña == bd.Contraseña[0, 0] && (Modulo == bd.Modulo[0, 0] || Modulo == bd.Modulo[0, 2] || Modulo == bd.Modulo[0, 3]):
+                    case var _ when Usuario == bd.Usuario[0, 0] && Contraseña == bd.Contraseña[0, 0] && (Modulo == bd.Modulo[0, 0] || Modulo == bd.Modulo[0, 2] || Modulo == bd.Modulo[0, 3]):
 
-                    MessageBox.Show("Bienvenido Admin");
-                    bv.Show();
-                    this.Hide();
+                        MessageBox.Show("Bienvenido Admin.");
+                        bv.Show();
+                        this.Hide();
 
-                    break;
+                        break;
 
-                case var _ when Usuario == bd.Usuario[0, 2] && Contraseña == bd.Contraseña[0, 2] && (Modulo == bd.Modulo[0, 0] || Modulo == bd.Modulo[0, 3]):
+                    case var _ when Usuario == bd.Usuario[0, 2] && Contraseña == bd.Contraseña[0, 2] && (Modulo == bd.Modulo[0, 0] || Modulo == bd.Modulo[0, 3]):
 
-                    MessageBox.Show("Bienvenido Ceci");
-                    bv.Show();
-                    this.Hide();
+                        MessageBox.Show("Bienvenido Ceci.");
+                        bv.Show();
+                        this.Hide();
 
-                    break;
+                        break;
 
-                case var _ when Usuario == bd.Usuario[0, 1] && Contraseña == bd.Contraseña[0, 1] &&  Modulo == bd.Modulo[0, 1]:
+                    case var _ when Usuario == bd.Usuario[0, 1] && Contraseña == bd.Contraseña[0, 1] && Modulo == bd.Modulo[0, 1]:
 
-                    MessageBox.Show("Bienvenido John");
-                    bv.Show();
-                    this.Hide();
+                        MessageBox.Show("Bienvenido John.");
+                        bv.Show();
+                        this.Hide();
 
-                    break;
+                        break;
 
-                default:
+                    default:
 
-                    if (Intentos > 3)
-                    {
-                        Process.GetCurrentProcess().Kill();
-                    }
-                    else
-                    {
                         Intentos++;
-                        MessageBox.Show("Los datos ingresados son incorrectos. Por favor, intenta nuevamente.");
-                    }
+                        MessageBox.Show("Usuario y/o Contraseña incorrecto(s) para el Módulo seleccionado. \nIntento  " + Intentos + " de 3.");
+                        txtUsuario.Clear();
+                        txtContraseña.Clear();
 
+                        break;
 
-                    break;
+                }
+             
 
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un Módulo antes de continuar.");
+            }
+            if (Intentos == 3)
+            {
+                MessageBox.Show("Cantidad de intentos excedida \nCerrando programa...");
+                Process.GetCurrentProcess().Kill();
             }
         }
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -105,6 +114,27 @@ namespace ProyectoSP1
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void CmdAceptar2_MouseEnter(object sender, EventArgs e)
+        {
+            CmdAceptar2.ForeColor = Color.Black;
+        }
+
+        private void CmdAceptar2_MouseLeave(object sender, EventArgs e)
+        {
+            CmdAceptar2.ForeColor = Color.Lime;
+
+        }
+
+        private void cmdCancelar2_MouseEnter(object sender, EventArgs e)
+        {
+            cmdCancelar2.ForeColor = Color.Black;
+        }
+
+        private void cmdCancelar2_MouseLeave(object sender, EventArgs e)
+        {
+            cmdCancelar2.ForeColor = Color.Red;
         }
     }
 }

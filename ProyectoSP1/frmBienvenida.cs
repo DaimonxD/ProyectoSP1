@@ -22,5 +22,15 @@ namespace ProyectoSP1
         {
             Process.GetCurrentProcess().Kill();
         }
+
+        private void cmdCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            cmdCerrar.ForeColor = Color.Black;
+        }
+
+        private void cmdCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            cmdCerrar.ForeColor = Color.Red;
+        }
     }
 }

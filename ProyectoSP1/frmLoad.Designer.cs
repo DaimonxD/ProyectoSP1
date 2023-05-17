@@ -68,9 +68,9 @@
             this.lblCargando.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCargando.Location = new System.Drawing.Point(178, 209);
             this.lblCargando.Name = "lblCargando";
-            this.lblCargando.Size = new System.Drawing.Size(213, 42);
+            this.lblCargando.Size = new System.Drawing.Size(387, 42);
             this.lblCargando.TabIndex = 1;
-            this.lblCargando.Text = "Cargando...";
+            this.lblCargando.Text = "Bienvenido al Sistema";
             this.lblCargando.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAB

@@ -103,6 +103,7 @@ namespace ProyectoSP1
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
             txtUsuario.MaxLength = 10;
+            txtUsuario.ForeColor = Color.Blue;
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)

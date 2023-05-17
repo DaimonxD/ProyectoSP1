@@ -96,7 +96,7 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Blue;
-            this.txtUsuario.Location = new System.Drawing.Point(3, 3);
+            this.txtUsuario.Location = new System.Drawing.Point(3, 1);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(263, 19);
             this.txtUsuario.TabIndex = 3;

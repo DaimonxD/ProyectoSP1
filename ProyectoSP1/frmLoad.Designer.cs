@@ -35,6 +35,7 @@
             this.lblCargando = new System.Windows.Forms.Label();
             this.lblAB = new System.Windows.Forms.Label();
             this.lblAA = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +95,16 @@
             this.lblAA.TabIndex = 3;
             this.lblAA.Text = "Sintepart";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(-3, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Sintepart S.R.L©";
+            // 
             // frmLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,6 +112,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(578, 282);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAB);
             this.Controls.Add(this.lblAA);
             this.Controls.Add(this.lblCargando);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.Label lblCargando;
         private System.Windows.Forms.Label lblAB;
         private System.Windows.Forms.Label lblAA;
+        private System.Windows.Forms.Label label1;
     }
 }

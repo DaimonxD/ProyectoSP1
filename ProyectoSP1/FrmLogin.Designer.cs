@@ -34,7 +34,6 @@
             this.lblMódulo = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.cboxMódulo = new System.Windows.Forms.ComboBox();
             this.CmdAceptar2 = new System.Windows.Forms.Button();
             this.cmdCancelar2 = new System.Windows.Forms.Button();
             this.lblNoSe = new System.Windows.Forms.Label();
@@ -49,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboxMódulo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,7 +110,7 @@
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtContraseña.Location = new System.Drawing.Point(3, 4);
+            this.txtContraseña.Location = new System.Drawing.Point(3, 1);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(266, 19);
             this.txtContraseña.TabIndex = 4;
@@ -117,25 +118,10 @@
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
-            // cboxMódulo
-            // 
-            this.cboxMódulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.cboxMódulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.cboxMódulo.FormattingEnabled = true;
-            this.cboxMódulo.Items.AddRange(new object[] {
-            "ADM",
-            "SIST",
-            "COM",
-            "VTA"});
-            this.cboxMódulo.Location = new System.Drawing.Point(410, 195);
-            this.cboxMódulo.Name = "cboxMódulo";
-            this.cboxMódulo.Size = new System.Drawing.Size(252, 21);
-            this.cboxMódulo.TabIndex = 5;
-            this.cboxMódulo.Text = "Seleccionar";
-            // 
             // CmdAceptar2
             // 
             this.CmdAceptar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.CmdAceptar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CmdAceptar2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.CmdAceptar2.FlatAppearance.BorderSize = 2;
             this.CmdAceptar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
@@ -154,6 +140,7 @@
             // cmdCancelar2
             // 
             this.cmdCancelar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.cmdCancelar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdCancelar2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.cmdCancelar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.cmdCancelar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -182,6 +169,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -288,6 +276,32 @@
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(-3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Sintepart S.R.L©";
+            // 
+            // cboxMódulo
+            // 
+            this.cboxMódulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.cboxMódulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMódulo.ForeColor = System.Drawing.SystemColors.Window;
+            this.cboxMódulo.FormattingEnabled = true;
+            this.cboxMódulo.Items.AddRange(new object[] {
+            "ADM",
+            "SIST",
+            "COM",
+            "VTA"});
+            this.cboxMódulo.Location = new System.Drawing.Point(415, 195);
+            this.cboxMódulo.Name = "cboxMódulo";
+            this.cboxMódulo.Size = new System.Drawing.Size(252, 21);
+            this.cboxMódulo.TabIndex = 5;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,7 +350,6 @@
         private System.Windows.Forms.Label lblMódulo;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.ComboBox cboxMódulo;
         private System.Windows.Forms.Button CmdAceptar2;
         private System.Windows.Forms.Button cmdCancelar2;
         private System.Windows.Forms.Label lblNoSe;
@@ -351,5 +364,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboxMódulo;
     }
 }
